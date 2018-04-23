@@ -11,13 +11,13 @@
   <body>
     <a-scene physics='gravity: -9.62'>
 
-      <a-entity id="cameraWrapper" position="0 10 25">
-        <a-camera>
+      <a-entity id="cameraWrapper" position="0 1 5">
+        <a-camera id="camera" static-body>
           <a-cursor></a-cursor>
         </a-camera>
       </a-entity>
 
-      <a-sphere src="img/soccer.png" radius="0.5" position="0 1 0" velocity="0" dynamic-body="mass:5"></a-sphere>
+      <a-sphere src="img/soccer.png" id="ball" radius="0.5" position="0 1 0" velocity="0" dynamic-body="mass:5"></a-sphere>
       <a-plane src="img/grass.jpg" height="50" width="30" rotation="-90 0 0" repeat="10 10" static-body></a-plane>
       <a-entity box></a-entity>
       <a-box position="3 0 0" color="red" dynamic-body="mass:50" height=""></a-box>
